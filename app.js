@@ -150,6 +150,10 @@ app.get("/signup", (req,res) => {
 //    res.send("successful");
 // });
 
+app.get("/", (req, res) => {
+    res.redirect("/listings");
+});
+
 app.use((err,req,res,next)=>{
      console.error(err.stack);  // Logs error details in console
     if (res.headersSent) {
